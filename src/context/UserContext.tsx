@@ -16,9 +16,9 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(userReducer, initialState);
 
   return (
-    <UserContext.Provider value={{ state, dispatch }}>
+    <UserContext value={{ state, dispatch }}>
       {children}
-    </UserContext.Provider>
+    </UserContext>
   );
 };
 
